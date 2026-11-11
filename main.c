@@ -4,17 +4,18 @@ int main(void)
 {
     int n;
     int i;
-    int sum = 0;
+    long long sum = 0;
     scanf("%d", &n);
-    if (n <= 0)
-    {
+    if (n < 0) {
         printf("NG");
-        return 0;
+    } else if (n == 0){
+        printf("0");
+    } else {
+        for (i = 1; i <= n; i++)
+        {
+            sum += i;
+        }
+        printf("%lld", sum);
     }
-    for (i = 1; i < n; i++)
-    {
-        sum += i;
-    }
-    printf("%d", sum);
     return 0;
 }
